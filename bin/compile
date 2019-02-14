@@ -86,11 +86,13 @@ puts-step "Installing nginx CACHE_DIR/NGINX_VERSION"
     --without-http_proxy_module \
     --with-http_gzip_static_module &> /dev/null
   puts-step "Configured nginx $NGINX_VERSION"
-  make &> /dev/null
+#  make &> /dev/null
   puts-step "Make nginx $NGINX_VERSION"
 fi
 
 cd $CACHE_DIR/$NGINX_VERSION
+puts-step "cd $CACHE_DIR/$NGINX_VERSION"
+
 make install &> /dev/null
 puts-step "Make install nginx $NGINX_VERSION"
 mkdir -p $BUILD_DIR/.profile.d
