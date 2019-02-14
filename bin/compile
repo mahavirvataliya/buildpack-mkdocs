@@ -50,6 +50,8 @@ if [[ -f requirements.txt ]]; then
 else
   puts-step "Installing MkDocs"
   python -m pip install --quiet mkdocs | indent
+  puts-step "Installing mkdocs-material "
+  python -m pip install --quiet mkdocs-material | indent
 fi
 
 puts-step "Running MkDocs"
