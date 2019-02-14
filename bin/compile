@@ -65,7 +65,7 @@ fi
 
 mkdocs build -c -d $BUILD_DIR/public -f $CONFIG_FILE | indent
 
-mkdocs serve -a 54.162.96.90:80
+mkdocs serve -a 127.0.0.1:80 & sleep 30 ; kill $!
 # puts-step "Installing pcre ($PCRE_VERSION)"
 # if [[ ! -d "$CACHE_DIR/$PCRE_VERSION" ]]; then
 #   cd $CACHE_DIR
